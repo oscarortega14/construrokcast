@@ -1,0 +1,8 @@
+# Configuración de despliegue en Cloudflare Workers.
+# El sitio es estático: no hay script de Worker, solo los assets que genera
+# `npm run build` en dist/. Por eso hay [assets] pero no `main`.
+name = "construrokcast"
+compatibility_date = "2025-09-01"
+
+[assets]
+directory = "./dist"
