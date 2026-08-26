@@ -4,5 +4,13 @@
 name = "construrokcast"
 compatibility_date = "2025-09-01"
 
+# Los dominios se declaran aqui para que 'wrangler deploy' cree tanto el
+# custom domain como su registro DNS. Hacerlo desde el panel dejo el dominio
+# listado pero sin registro en la zona, y el sitio no resolvia.
+routes = [
+  { pattern = "construrokcast.com", custom_domain = true },
+  { pattern = "www.construrokcast.com", custom_domain = true }
+]
+
 [assets]
 directory = "./dist"
