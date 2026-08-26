@@ -1,0 +1,115 @@
+.capabilities {
+  padding: 118px 0;
+  background: #0e151b;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.cap {
+  min-height: 300px;
+  /* .cap es un <button>: se resetean los estilos propios del control. */
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  border-radius: 22px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cap:before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(198, 123, 60, 0.14);
+  border-radius: 50%;
+  right: -58px;
+  top: -50px;
+}
+
+.cap.visible:hover,
+.cap.visible:focus-visible {
+  transform: translateY(-6px);
+  border-color: rgba(226, 166, 109, 0.48);
+  background: linear-gradient(180deg, rgba(198, 123, 60, 0.11), rgba(255, 255, 255, 0.02));
+}
+
+/* Offset negativo: .cap tiene overflow:hidden y recortaría un outline exterior. */
+.cap:focus-visible {
+  outline: 2px solid var(--copper2);
+  outline-offset: -3px;
+}
+
+.cap .num {
+  font-size: 11px;
+  color: var(--copper2);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.cap h3 {
+  font-size: 23px;
+  line-height: 1.08;
+  margin: auto 0 14px;
+  letter-spacing: -0.025em;
+}
+
+.cap p {
+  font-size: 13px;
+  color: #9faab2;
+  margin: 0;
+}
+
+.cap-more {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--copper2);
+  opacity: 0.72;
+  transition: 0.25s;
+}
+
+.cap-more i {
+  font-style: normal;
+  transition: transform 0.25s;
+}
+
+.cap:hover .cap-more,
+.cap:focus-visible .cap-more {
+  opacity: 1;
+}
+
+.cap:hover .cap-more i,
+.cap:focus-visible .cap-more i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1120px) {
+  .cap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .cap-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

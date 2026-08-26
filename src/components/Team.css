@@ -1,0 +1,50 @@
+.team {
+  padding: 118px 0;
+  background: var(--paper);
+  color: #151a1e;
+}
+
+.team .eyebrow {
+  color: #a45f2d;
+}
+
+.team-lead {
+  color: #687177;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.profile {
+  padding: 20px;
+  border: 1px solid #d7d1c9;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.profile b {
+  font-size: 13px;
+}
+
+.profile span {
+  font-size: 11px;
+  color: #6d7479;
+  display: block;
+  margin-top: 4px;
+}
+
+@media (max-width: 820px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

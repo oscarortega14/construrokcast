@@ -1,0 +1,57 @@
+.cta {
+  padding: 126px 0 100px;
+  background: #0a0f13;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta:before {
+  content: '';
+  position: absolute;
+  width: 660px;
+  height: 660px;
+  border: 1px solid rgba(198, 123, 60, 0.15);
+  border-radius: 50%;
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 120px rgba(198, 123, 60, 0.018);
+}
+
+.cta .wrap {
+  position: relative;
+}
+
+.cta h2 {
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  margin: 15px auto 24px;
+  max-width: 970px;
+}
+
+.cta p {
+  color: #aeb6bc;
+  max-width: 630px;
+  margin: 0 auto 30px;
+  font-size: 17px;
+}
+
+.contactline {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 38px;
+  font-size: 13px;
+  color: #d5dadd;
+}
+
+.contactline b {
+  color: #e2a66d;
+  font-weight: 600;
+}
+
+.contactline a:hover {
+  color: #e2a66d;
+}

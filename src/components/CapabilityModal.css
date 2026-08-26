@@ -1,0 +1,188 @@
+.capmodal {
+  width: min(880px, calc(100% - 40px));
+  max-height: min(86vh, 780px);
+  padding: 0;
+  border: 1px solid rgba(226, 166, 109, 0.28);
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, #16212a, #0e151b 62%);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  overflow: visible;
+}
+
+/* showModal() enfoca el propio <dialog>; el anillo azul del navegador sobra
+   porque el backdrop ya señala el modal y cada control tiene su propio foco. */
+.capmodal:focus {
+  outline: none;
+}
+
+.capmodal::backdrop {
+  background: rgba(6, 9, 12, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.capmodal-inner {
+  position: relative;
+  padding: 42px 44px 38px;
+  max-height: min(86vh, 780px);
+  overflow-y: auto;
+  border-radius: var(--radius);
+}
+
+/* Mismo motivo circular que usan el hero y el CTA. */
+.capmodal-inner:before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(198, 123, 60, 0.16);
+  border-radius: 50%;
+  right: -130px;
+  top: -120px;
+  pointer-events: none;
+}
+
+.capmodal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  color: #c3ccd2;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.capmodal-close:hover {
+  border-color: rgba(226, 166, 109, 0.7);
+  color: white;
+}
+
+/* El foco entra aquí al abrir; en cobre se lee como parte del diseño. */
+.capmodal-close:focus-visible {
+  outline: 2px solid var(--copper2);
+  outline-offset: 2px;
+  color: white;
+}
+
+.capmodal-head {
+  position: relative;
+  max-width: 640px;
+}
+
+.capmodal-num {
+  font-size: 11px;
+  color: var(--copper2);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.capmodal h3 {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin: 10px 0 14px;
+}
+
+.capmodal-intro {
+  font-size: 15px;
+  color: #a9b4bb;
+  margin: 0;
+}
+
+.capmodal-cols {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 38px;
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.capmodal-label {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #80909b;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.capmodal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.capmodal-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #c2cbd1;
+  line-height: 1.45;
+}
+
+.capmodal-list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--copper);
+}
+
+.capmodal-note {
+  margin: 26px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #7d8a93;
+  border-left: 2px solid rgba(198, 123, 60, 0.5);
+  padding-left: 14px;
+}
+
+.capmodal-cta {
+  margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  .capmodal-inner {
+    padding: 34px 24px 30px;
+  }
+
+  .capmodal-cols {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .capmodal[open] {
+    animation: capmodal-in 0.28s ease both;
+  }
+
+  .capmodal[open]::backdrop {
+    animation: capmodal-fade 0.28s ease both;
+  }
+}
+
+@keyframes capmodal-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+}
+
+@keyframes capmodal-fade {
+  from {
+    opacity: 0;
+  }
+}
