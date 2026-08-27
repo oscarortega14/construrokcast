@@ -8,7 +8,8 @@ export default function Hero() {
     <section className="hero" id="inicio">
       <div className="wrap">
         <Reveal className="hero-copy">
-          <div className="eyebrow">CONSTRU ROKCAST S.A.S. · PASTO, NARIÑO</div>
+          <img className="hero-logo" src="/img/logo-wordmark.webp" alt="CONSTRU ROKCAST S.A.S." />
+          <div className="eyebrow hero-location">PASTO, NARIÑO</div>
           <h1>
             Construcción <span>respaldada por ingeniería y tecnología.</span>
           </h1>

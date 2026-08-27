@@ -11,7 +11,7 @@ export default function TopNav() {
     <header className="topnav">
       <div className="navinner">
         <a className="brand" href="#inicio">
-          <span className="mark">CR</span>
+          <img className="brand-logo-mark" src="/img/logo-mark.webp" alt="Símbolo CONSTRU ROKCAST" />
           <span>
             <strong>CONSTRU ROKCAST S.A.S.</strong>
             <small>CONSTRUCCIÓN · INGENIERÍA · TECNOLOGÍA</small>

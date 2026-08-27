@@ -1,0 +1,178 @@
+.bim-portfolio {
+  margin-top: 58px;
+  padding-top: 42px;
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.bim-portfolio-head {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 26px;
+}
+
+.bim-portfolio-head h3 {
+  font-size: 34px;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 8px 0 0;
+}
+
+.bim-portfolio-head p {
+  margin: 0;
+  color: #9ba7af;
+  font-size: 14px;
+  line-height: 1.65;
+  max-width: 680px;
+}
+
+.bim-proof {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.bim-proof-item {
+  padding: 14px 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.bim-proof-item b {
+  display: block;
+  font-size: 10px;
+  color: var(--copper2);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 5px;
+}
+
+.bim-proof-item span {
+  display: block;
+  font-size: 12px;
+  color: #d2d9dd;
+  line-height: 1.4;
+}
+
+.bim-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.bim-project-card {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 22px;
+  background: #141e25;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  transition: 0.25s;
+}
+
+.bim-project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(226, 166, 109, 0.42);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.bim-project-media {
+  height: 280px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 105px;
+  gap: 6px;
+  padding: 6px;
+  background: #0d1419;
+}
+
+.bim-project-main,
+.bim-project-small {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bim-project-main {
+  border-radius: 16px 8px 8px 16px;
+}
+
+.bim-project-side {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+  min-height: 0;
+}
+
+.bim-project-small {
+  border-radius: 8px;
+  background: white;
+}
+
+.bim-project-body {
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bim-project-body .proj-type {
+  color: var(--copper2);
+}
+
+.bim-project-body h4 {
+  font-size: 22px;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 8px 0 9px;
+  color: #f3f5f6;
+}
+
+.bim-project-body p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #9eabb2;
+  margin: 0;
+  max-width: 92%;
+}
+
+.bim-project-body .tag {
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #c7d0d5;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* La acción se apoya en el borde inferior aunque el resumen ocupe menos. */
+.bim-project-body .project-actions {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.bim-project-body .more-btn {
+  background: #f3f1ec;
+  color: #152027;
+}
+
+.bim-project-body .more-btn:hover {
+  background: var(--copper2);
+  color: #11181e;
+}
+
+@media (max-width: 1050px) {
+  .bim-portfolio-head {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .bim-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bim-proof {
+    grid-template-columns: 1fr 1fr;
+  }
+}

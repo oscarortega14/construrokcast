@@ -29,6 +29,9 @@ export default function Capabilities() {
               aria-haspopup="dialog"
             >
               <span className="num">{cap.num}</span>
+              <div className="cap-media">
+                <img src={cap.image} alt={cap.title} />
+              </div>
               <h3>{cap.title}</h3>
               <p>{cap.text}</p>
               <span className="cap-more">

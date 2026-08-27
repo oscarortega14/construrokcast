@@ -54,23 +54,47 @@
 }
 
 .cap .num {
+  display: block;
   font-size: 11px;
   color: var(--copper2);
   font-weight: 800;
   letter-spacing: 0.15em;
+  margin-bottom: 4px;
+}
+
+.cap-media {
+  height: 112px;
+  margin: 14px 0 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cap-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.cap:hover .cap-media img,
+.cap:focus-visible .cap-media img {
+  transform: scale(1.04);
 }
 
 .cap h3 {
   font-size: 23px;
   line-height: 1.08;
-  margin: auto 0 14px;
+  margin: 0 0 12px;
   letter-spacing: -0.025em;
 }
 
 .cap p {
   font-size: 13px;
   color: #9faab2;
-  margin: 0;
+  margin: auto 0 0;
 }
 
 .cap-more {

@@ -1,0 +1,33 @@
+/* Cierre de la sección eléctrica. */
+.elect-evidence {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 12px;
+}
+
+.elect-evidence-card {
+  border: 1px solid #d7d1c8;
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 16px;
+}
+
+.elect-evidence-card b {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.elect-evidence-card p {
+  font-size: 10px;
+  color: #687177;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .elect-evidence {
+    grid-template-columns: 1fr;
+  }
+}
